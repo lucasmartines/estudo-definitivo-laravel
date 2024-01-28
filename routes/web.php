@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
 
    // $carros = DB::table("carros")->get();
@@ -25,6 +26,19 @@ Route::get('/', function () {
  
 
     return view('hello', ["carros" => $carros ]);
+});
+
+Route::get("/here" , function(){
+
+    $nome = "Lucas";
+    $x = <<<HTML
+
+        <h2> Olá seus tonto meu nome $nome </h2> 
+        <p> é legal usar esse método para ter o higlhlight </p>
+
+    HTML;
+
+    echo $x;
 });
 
 
