@@ -20,10 +20,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 
    // $carros = DB::table("carros")->get();
-    $carros =   Carro::all();
+    $carros =   Carro::all(); 
+    $um_carro = Carro::find(1);
+    
+    if($um_carro){  $um_carro = $um_carro->first(); }
 
-    $um_carro = Carro::find(1)->first();
- 
 
     return view('hello', ["carros" => $carros ]);
 });

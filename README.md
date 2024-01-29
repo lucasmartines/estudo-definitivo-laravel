@@ -30,3 +30,7 @@ para php, assim eu não fico amarrado ao mysql ou sql server que tem sintaxe dis
 E ainda tem o versionamento da estrutura de dados mantida junsto com o código da aplicação
 
 
+### tem um bug que em alguns banco de dados precisa mudar no banco de dados o defaultStringLength
+
+use Illuminate\Support\Facades\Schema;
+Schema::defaultStringLength(191); 
