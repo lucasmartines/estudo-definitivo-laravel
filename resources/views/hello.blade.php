@@ -13,6 +13,9 @@
     <p>O laravel é muito simplificado então tem muita coisa pra estudar, a simplificação só vale a pena <br>
         se for estudada a fundo se não, não vai se aproveitar de todos os recursos desse Framework</p>
 
+
+    <a href="{{route('salvar_carro_page')}}">Inserir um Carro</a>
+
     @if($carros)
         <table>
                     <tr>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarroController;
 use App\Models\Carro;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -16,8 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get("/" , [ CarroController::class , "index"] ) ->name("carro");
+Route::get("/salvar_carro" , [ CarroController::class , "salvar_carro"] )->name("salvar_carro_page");
+Route::post("/salvar" , [ CarroController::class , "salvar"] )->name("post_salvar_carro");
 
-Route::get('/', function () {
+
+Route::get('/antes', function () {
 
    // $carros = DB::table("carros")->get();
     $carros =   Carro::all(); 

@@ -12,6 +12,9 @@ class Carro extends Model
 {
     use HasFactory;
 
+    public $fillable = ['nome',"ano","cilindrada","peso","potencia_cv","descricao"];
+
+
     public function detalhes():hasMany{
         return $this->hasMany(CarroDetalhe::class );
     }
