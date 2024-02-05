@@ -11,6 +11,7 @@ class CarroDetalhe extends Model
 {
     use HasFactory;
 
+    
     public function carro():BelongsTo{
         return $this->belongsTo(Carro::class);
     }

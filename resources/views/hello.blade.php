@@ -30,9 +30,12 @@
                         <td>{{$c->ano}} </td> 
                         <td>{{$c->peso}}</td>
                         <td>
-                            @foreach($c->detalhes()->get() as  $det)
+                            @foreach($c->detalhes()->get() as  $det/*detalhes*/)
                                 @if($det->valor_parametro == '1')
                                     {{ Helper::converter_nome_detalhe(  $det->nome_parametro ) }}
+                                @endif
+                                @if($det->nome_parametro == "url_imagem")
+                                    <img src="{{  asset( 'carros/' . $det->valor_parametro)    }}" alt="">
                                 @endif
                             @endforeach
                         </td>

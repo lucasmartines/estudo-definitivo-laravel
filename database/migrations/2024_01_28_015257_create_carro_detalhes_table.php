@@ -18,11 +18,8 @@ return new class extends Migration
             $table->string("nome_parametro");
             $table->string("valor_parametro");
 
-         //   $table->unsignedBigInteger("carro_id")->index();
-
-         //   $table->foreign("carro_id")->references("id")->on("carros")
-         //       ->cascadeOnDelete();
-         $table->foreignIdFor(Carro::class);
+            $table->timestamps();             
+            $table->foreignIdFor(Carro::class);
 
         });
     }
